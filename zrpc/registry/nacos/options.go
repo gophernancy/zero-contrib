@@ -9,16 +9,16 @@ const (
 
 // options
 type Options struct {
-	ListenOn    string
-	ServiceName string
-	Prefix      string
-	Weight      float64
-	Cluster     string
-	Group       string
-	Metadata    map[string]string
+	ListenOn    string   `json:",optional"`
+	ServiceName string   `json:",optional"`
+	Prefix      string   `json:",optional"`
+	Weight      float64   `json:",optional"`
+	Cluster     string   `json:",optional"`
+	Group       string   `json:",optional"`
+	Metadata    map[string]string   `json:",optional"`
 
-	ServerConfig []constant.ServerConfig
-	ClientConfig *constant.ClientConfig
+	ServerConfig []constant.ServerConfig   `json:",optional"`
+	ClientConfig *constant.ClientConfig   `json:",optional"`
 }
 
 type Option func(*Options)
